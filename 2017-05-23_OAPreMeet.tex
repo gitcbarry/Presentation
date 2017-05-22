@@ -36,7 +36,7 @@
 
 
 \title{Summer oscillation analysis}
-\subtitle{VALOR update}
+\subtitle{Event rate validation}
 
 \author{\textbf{Chris Barry}, Andy Chappell}
 \institute{     
@@ -59,18 +59,20 @@
 \end{frame}
 
 %===============================================================================
-\section*{VALOR Status}
-\begin{frame}{VALOR status}
+\section*{Validation overview}
+\begin{frame}{Validation overview}
 	\begin{itemize}
-		\item Event rates show good agreement with p-theta and MaCh3
-		\item Systematic variations show good agreement with p-theta and MaCh3
-		\item Statistics only Asimov fits between VALOR and p-theta agree
-		\item Asimov fits shown today use May 04 BANFF matrix
+		\item Event rates:
 		\begin{itemize}
-			\item Does not include bug fixes referred to in Clarence's talk
-			\item All plots should be considered preliminary
+			\item Good agreement amongst the three groups for Asimov A
+			\item p-theta differs from VALOR and MaCh3 in RHC for Asimov B
 		\end{itemize}
-		\item Tech note near complete pending final results
+		\item Systematic variations:
+		\begin{itemize}
+			\item Generally good agreement amongst the three groups
+			\item Expected differences in BeRPA variations
+			\item p-theta shows differences in some parameters - some bin-dependency
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -83,7 +85,7 @@
 	Parameter(s) &	Asimov A & Asimov B	\\
 	\hline
 	$\sin^{2} \theta_{12}$	&	0.304	&	0.304	\\
-	$\sin^{2}\theta_{23}$	&	0.528	&  0.624	\\
+	$\sin^{2}\theta_{23}$	&	0.528	&  0.450	\\
 	$\sin^{2} \theta_{13}$	&	0.0217	&	0.0217	\\
 	$\Delta m^{2}_{21}$	&	$7.53 \times 10^{-5}~\mbox{eV}^2/\mbox{c}^4$	&	$7.53 \times 10^{-5}~\mbox{eV}^2/\mbox{c}^4$	\\
 	$\Delta m^{2}_{32}$ 	&	$2.509 \times 10^{-3}~\mbox{eV}^2/\mbox{c}^4$	&	$2.509 \times 10^{-3}~\mbox{eV}^2/\mbox{c}^4$	\\
@@ -93,301 +95,326 @@
 	\end{tabular} %
 	\begin{itemize}
 		\item Asimov A based on T2K Run 1-7 best fit
-		\item Asimov B uses NOvA non-maximal $\theta_{23}$ and CP conservation
+		\item Asimov B alters CP hypothesis and $\theta_{23}$ value
+		\begin{itemize}
+			\item For sensitivity studies the value of $\theta_{23}$ will use NOvA non-maximal mixing value
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 %===============================================================================
-\section{Event rates}
+\section{Event rates pre-BANFF unoscillated}
 \begin{frame}
 	\centering
-	\Large Run 1-8 event rates
+	\Large Pre-BANFF unoscillated event rate validation\\(Run 1-7c POT)
 \end{frame}
 
-\begin{frame}{Total event rates by mode}
+\begin{frame}{Event rates: $\mu$-like samples pre-BANFF unoscillated}
 	\centering
-	\begin{tabular}{ | l || r | r | }
-		\hline
-	    				&	Asimov A	&	Asimov B	\\\hline\hline
-	 	CCQE    		& 	&	\\ \hline
-		CC$1\pi$		&	&	\\ \hline
-		CCcoherent		&	&	\\ \hline
-		2p2h			&	&	\\ \hline
-		CCother			&	&	\\ \hline
-		NC$1\pi^0$		&	&	\\ \hline
-		NC$1\pi^\pm$	&	&	\\ \hline
-		NCcoherent		&	&	\\ \hline
-		NCother			&	&	\\ \hline
-		\hline
-		Total			&	&	\\ \hline
-	\end{tabular}
+	\begin{figure}
+		\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_unosc}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Event rates: $e$-like samples pre-BANFF unoscillated}
+	\centering
+	\begin{figure}
+		\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_unosc}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Event rates: $\nu_e\text{ CC}1\pi$-like samples pre-BANFF unoscillated}
+	\centering
+	\begin{figure}
+		\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_unosc}
+	\end{figure}
 \end{frame}
 
 %===============================================================================
-\section{\deltacp sensitivity}
+\section{Event rates pre-BANFF oscillated}
 \begin{frame}
 	\centering
-	\Large Run 1-8 \deltacp sensitivity\\
+	\Large Pre-BANFF oscillated event rate validation\\(Run 1-7c POT)
 \end{frame}
 
-\begin{frame}{\deltacp sensitivity - Asimov A}
+\begin{frame}{Event rates: $\mu$-like samples pre-BANFF oscillated}
 	\centering
+
 	\begin{columns}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/dcp_global_t2k}
-				\caption*{without reactor constraint}
+				\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
+				\caption*{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/dcp_global_t2k}
-				\caption*{with reactor constraint}
+				\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
+				\caption*{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\begin{frame}{\deltacp sensitivity - Asimov B}
+\begin{frame}{Event rates: $e$-like samples pre-BANFF oscillated}
 	\centering
+
 	\begin{columns}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/dcp_global_t2k}
-				\caption*{without reactor constraint}
+				\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
+				\caption*{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/dcp_global_t2k}
-				\caption*{with reactor constraint}
+				\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
+				\caption*{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-%===============================================================================
-\section{\sinsqthetaonethree sensitivity}
-\begin{frame}
+\begin{frame}{Event rates: $\nu_e\text{ CC}1\pi$-like samples pre-BANFF oscillated}
 	\centering
-	\Large Run 1-8 \sinsqthetaonethree sensitivity\\
-\end{frame}
 
-\begin{frame}{\sinsqthetaonethree sensitivity - Asimov A}
-	\centering
 	\begin{columns}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th13_global_t2k}
-				\caption*{without reactor constraint}
+				\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
+				\caption*{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th13_global_t2k}
-				\caption*{with reactor constraint}
-			\end{figure}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{\sinsqthetaonethree sensitivity - Asimov B}
-	\centering
-	\begin{columns}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th13_global_t2k}
-				\caption*{without reactor constraint}
-			\end{figure}
-		\end{column}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th13_global_t2k}
-				\caption*{with reactor constraint}
+				\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
+				\caption*{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
 %===============================================================================
-\section{\sinsqthetatwothree sensitivity}
+\section{Event rates post-BANFF unoscillated}
 \begin{frame}
 	\centering
-	\Large Run 1-8 \sinsqthetatwothree sensitivity\\
+	\Large Post-BANFF unoscillated event rate validation\\(Run 1-7c POT)
 \end{frame}
 
-\begin{frame}{\sinsqthetatwothree sensitivity - Asimov A}
+\begin{frame}{Event rates: $\mu$-like samples post-BANFF unoscillated}
 	\centering
+	\begin{figure}
+		\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_unosc}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Event rates: $e$-like samples post-BANFF unoscillated}
+	\centering
+	\begin{figure}
+		\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_unosc}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Event rates: $\nu_e\text{ CC}1\pi$-like samples post-BANFF unoscillated}
+	\centering
+	\begin{figure}
+		\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_unosc}
+	\end{figure}
+\end{frame}
+
+%===============================================================================
+\section{Event rates post-BANFF oscillated}
+\begin{frame}
+	\centering
+	\Large Post-BANFF oscillated event rate validation\\(Run 1-7c POT)
+\end{frame}
+
+\begin{frame}{Event rates: $\mu$-like samples post-BANFF oscillated}
+	\centering
+
 	\begin{columns}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th23_global_t2k}
-				\caption*{without reactor constraint}
+				\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
+				\caption*{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th23_global_t2k}
-				\caption*{with reactor constraint}
+				\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
+				\caption*{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\begin{frame}{\sinsqthetatwothree sensitivity - Asimov B}
+\begin{frame}{Event rates: $e$-like samples post-BANFF oscillated}
 	\centering
+
 	\begin{columns}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th23_global_t2k}
-				\caption*{without reactor constraint}
+				\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
+				\caption*{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th23_global_t2k}
-				\caption*{with reactor constraint}
+				\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
+				\caption*{Asimov B}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Event rates: $\nu_e\text{ CC}1\pi$-like samples post-BANFF oscillated}
+	\centering
+	\begin{columns}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
+				\caption*{Asimov A}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
+				\caption*{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
 %===============================================================================
-\section{\dmsqtwothree sensitivity}
+\section{Systematic variations validation}
 \begin{frame}
 	\centering
-	\Large Run 1-8 \dmsqtwothree sensitivity\\
+	\Large Pre-BANFF systematic variations validation\\(Run 1-7c POT)
 \end{frame}
 
-\begin{frame}{\dmsqtwothree sensitivity - Asimov A}
+\begin{frame}{Example spline variations: CA5}
 	\centering
 	\begin{columns}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/dmsq23_global_t2k}
-				\caption*{without reactor constraint}
+				\includegraphics[page=11, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs MaCh3}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/dmsq23_global_t2k}
-				\caption*{with reactor constraint}
+				\includegraphics[page=7, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs p-theta}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\begin{frame}{\dmsqtwothree sensitivity - Asimov B}
+\begin{frame}{Example normalisation variations: $\mu$-like CC coherent}
 	\centering
 	\begin{columns}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/dmsq23_global_t2k}
-				\caption*{without reactor constraint}
+				\includegraphics[page=17, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs MaCh3}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/dmsq23_global_t2k}
-				\caption*{with reactor constraint}
+				\includegraphics[page=13, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs p-theta}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{BeRPA variations: BeRPA A}
+	\centering
+	\begin{columns}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=7, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs MaCh3}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=17, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs p-theta}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{BeRPA variations: BeRPA B}
+	\centering
+	\begin{columns}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=8, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs MaCh3}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=18, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs p-theta}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{BeRPA variations: BeRPA D}
+	\centering
+	\begin{columns}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=9, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs MaCh3}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=19, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs p-theta}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{BeRPA variations: BeRPA E}
+	\centering
+	\begin{columns}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=10, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs MaCh3}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\paperwidth}
+			\begin{figure}
+				\includegraphics[page=20, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
+				\caption*{VALOR vs p-theta}
 			\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
 %===============================================================================
-\section{\sinsqthetaonethree vs \deltacp sensitivity}
-\begin{frame}
-	\centering
-	\Large Run 1-8 \sinsqthetaonethree vs \deltacp sensitivity\\
-\end{frame}
-
-\begin{frame}{\sinsqthetaonethree vs \deltacp sensitivity - Asimov A}
-	\centering
-	\begin{columns}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th13_dcp_global_t2k}
-				\caption*{without reactor constraint}
-			\end{figure}
-		\end{column}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th13_dcp_global_t2k}
-				\caption*{with reactor constraint}
-			\end{figure}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{\sinsqthetaonethree vs \deltacp sensitivity - Asimov B}
-	\centering
-	\begin{columns}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th13_dcp_global_t2k}
-				\caption*{without reactor constraint}
-			\end{figure}
-		\end{column}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th13_dcp_global_t2k}
-				\caption*{with reactor constraint}
-			\end{figure}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%===============================================================================
-\section{\sinsqthetatwothree vs \dmsqtwothree sensitivity}
-\begin{frame}
-	\centering
-	\Large Run 1-8 \sinsqthetatwothree vs \dmsqtwothree sensitivity\\
-\end{frame}
-
-\begin{frame}{\sinsqthetatwothree vs \dmsqtwothree sensitivity - Asimov A}
-	\centering
-	\begin{columns}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th23_dmsq23_global_t2k}
-				\caption*{without reactor constraint}
-			\end{figure}
-		\end{column}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th23_dmsq23_global_t2k}
-				\caption*{with reactor constraint}
-			\end{figure}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{\sinsqthetatwothree vs \dmsqtwothree sensitivity - Asimov B}
-	\centering
-	\begin{columns}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th23_dmsq23_global_t2k}
-				\caption*{without reactor constraint}
-			\end{figure}
-		\end{column}
-		\begin{column}{0.5\paperwidth}
-			\begin{figure}
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, clip, scale=0.33] {images/sensitivity/th23_dmsq23_global_t2k}
-				\caption*{with reactor constraint}
-			\end{figure}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%===============================================================================
-\section{\sinsqthetatwothree vs \dmsqtwothree sensitivity}
+\section{Conclusion}
 \begin{frame}{Conclusion}
 	\centering
 	\begin{itemize}
-		\item 
+		\item Good agreement between VALOR and MaCh3 in rates and variations
+		\item p-theta differences under investigation
 	\end{itemize}
+\end{frame}
+
+%===============================================================================
+\section{Backup}
+\begin{frame}
+	\centering
+	\Large Backup
 \end{frame}
 
 \end{document}
