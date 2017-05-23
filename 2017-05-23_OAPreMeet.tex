@@ -1,7 +1,7 @@
 \documentclass{beamer}
 \usepackage[export]{adjustbox}
 \usepackage{booktabs}
-\usepackage{caption}
+%\usepackage[labelformat=empty]{caption}
 \usepackage{fancyvrb}
 \usepackage{graphicx}
 \usepackage{mathtools}
@@ -11,6 +11,9 @@
 \usetikzlibrary{positioning}
 \usepackage{xcolor}
 \usepackage{xspace}
+%\captionsetup{labelformat=empty,labelsep=none}
+%\captionsetup[figure]{labelformat=empty,labelsep=none}% redefines 
+\setbeamertemplate{caption}{\insertcaption}
 
 \setbeamertemplate{navigation symbols}{} %turn off navigation symbols
 
@@ -19,20 +22,28 @@
 {
 	\leavevmode%
 	\hbox{%
-		\begin{beamercolorbox}[wd=0.3\paperwidth,left]{white}
-			\hspace*{0.5cm}\usebeamerfont{author in head/foot}\insertshortauthor
-		\end{beamercolorbox}
-    	\begin{beamercolorbox}[wd=0.4\paperwidth,center]{white}
-    		\usebeamerfont{title in head/foot}\textbf{\insertshorttitle: \insertshortsubtitle}
-    	\end{beamercolorbox}
-    	\begin{beamercolorbox}[wd=0.3\paperwidth,right]{white}
-    		\insertframenumber{} / \inserttotalframenumber\hspace*{0.5cm}
-    	\end{beamercolorbox}
-    }%
+          \begin{beamercolorbox}[wd=0.3\paperwidth,left]{white}
+            \hspace*{0.5cm}\usebeamerfont{author in head/foot}\insertshortauthor
+          \end{beamercolorbox}
+          \begin{beamercolorbox}[wd=0.4\paperwidth,center]{white}
+            \usebeamerfont{title in head/foot}\textbf{\insertshorttitle: \insertshortsubtitle}
+          \end{beamercolorbox}
+          \begin{beamercolorbox}[wd=0.3\paperwidth,right]{white}
+            \insertframenumber{} / \inserttotalframenumber\hspace*{0.5cm}
+          \end{beamercolorbox}
+        }%
   	\vskip0pt%
 }
 \makeatletter
 %\setbeamertemplate{footline}[frame number]
+
+\newcommand{\backupbegin}{
+   \newcounter{finalframe}
+   \setcounter{finalframe}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \setcounter{framenumber}{\value{finalframe}}
+}
 
 
 \title{Summer oscillation analysis}
@@ -66,8 +77,7 @@
 	\begin{itemize}
 		\item Event rates:
 		\begin{itemize}
-			\item Good agreement amongst the three groups for Asimov A
-			\item p-theta differs from VALOR and MaCh3 in RHC for Asimov B
+			\item Good agreement amongst VALOR, MaCh3 and p-theta for Asimov A and Asimov B
 		\end{itemize}
 		\item Systematic variations:
 		\begin{itemize}
@@ -146,13 +156,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
-				\caption*{Asimov A}
+				\caption{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_B}
-				\caption*{Asimov B}
+				\includegraphics[page=1, trim={0cm 8.4cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_B}
+				\caption{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -165,13 +175,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
-				\caption*{Asimov A}
+				\caption{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_B}
-				\caption*{Asimov B}
+				\includegraphics[page=2, trim={0cm 6.5cm 13cm 2.0cm}, clip, scale=0.52] {images/rates/prefit_B}
+				\caption{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -184,13 +194,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_A}
-				\caption*{Asimov A}
+				\caption{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/prefit_B}
-				\caption*{Asimov B}
+				\includegraphics[page=3, trim={0cm 12.75cm 13cm 2.35cm}, clip, scale=0.52] {images/rates/prefit_B}
+				\caption{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -238,13 +248,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
-				\caption*{Asimov A}
+				\caption{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[page=1, trim={0cm 9cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_B}
-				\caption*{Asimov B}
+				\includegraphics[page=1, trim={0cm 8.4cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_B}
+				\caption{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -257,13 +267,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
-				\caption*{Asimov A}
+				\caption{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[page=2, trim={0cm 8cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_B}
-				\caption*{Asimov B}
+				\includegraphics[page=2, trim={0cm 6.5cm 13cm 2.0cm}, clip, scale=0.52] {images/rates/postfit_B}
+				\caption{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -275,13 +285,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_A}
-				\caption*{Asimov A}
+				\caption{Asimov A}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
-				\includegraphics[page=3, trim={0cm 15cm 13cm 1cm}, clip, scale=0.52] {images/rates/postfit_B}
-				\caption*{Asimov B}
+				\includegraphics[page=3, trim={0cm 12.75cm 13cm 2.35cm}, clip, scale=0.52] {images/rates/postfit_B}
+				\caption{Asimov B}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -300,13 +310,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=11, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs MaCh3}
+				\caption{VALOR vs MaCh3}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=7, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs p-theta}
+				\caption{VALOR vs p-theta}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -318,13 +328,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=17, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs MaCh3}
+				\caption{VALOR vs MaCh3}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=13, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs p-theta}
+				\caption{VALOR vs p-theta}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -336,13 +346,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=7, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs MaCh3}
+				\caption{VALOR vs MaCh3}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=17, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs p-theta}
+				\caption{VALOR vs p-theta}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -354,13 +364,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=8, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs MaCh3}
+				\caption{VALOR vs MaCh3}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=18, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs p-theta}
+				\caption{VALOR vs p-theta}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -372,13 +382,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=9, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs MaCh3}
+				\caption{VALOR vs MaCh3}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=19, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs p-theta}
+				\caption{VALOR vs p-theta}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -390,13 +400,13 @@
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=10, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_mach3/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs MaCh3}
+				\caption{VALOR vs MaCh3}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.5\paperwidth}
 			\begin{figure}
 				\includegraphics[page=20, trim={0cm 0cm 0cm 0cm}, clip, scale=0.35] {images/variations/valor_ptheta/variations_prebanff_unosc_1Re}
-				\caption*{VALOR vs p-theta}
+				\caption{VALOR vs p-theta}
 			\end{figure}
 		\end{column}
 	\end{columns}
@@ -407,12 +417,15 @@
 \begin{frame}{Conclusion}
 	\centering
 	\begin{itemize}
-		\item Good agreement between VALOR and MaCh3 in rates and variations
+		\item Good agreement between VALOR and MaCh3 and p-theta in rates
+                \item Diferences seen in p-theta systematic variations
 		\item p-theta differences under investigation
 	\end{itemize}
 \end{frame}
 
 %===============================================================================
+\appendix
+\backupbegin
 \section{Backup}
 \begin{frame}
 	\centering
@@ -461,5 +474,11 @@
 	\end{figure}
 \end{frame}
 
+\backupend
 \end{document}
 
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
